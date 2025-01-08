@@ -27,5 +27,5 @@ jobs:
 
       - name: Run Kubectl
         run: |
-             env
+             export KUBECONFIG=/home/opc/.kube/config
              kubectl get nodes -A
