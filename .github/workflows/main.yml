@@ -26,4 +26,6 @@ jobs:
           cluster: ${{ secrets.OKE_CLUSTER_OCID }}
 
       - name: Run Kubectl
-        run: kubectl get nodes -A
+        run: |
+             export KUBECONFIG=$HOME/.kube/config
+             kubectl get nodes -A
