@@ -27,5 +27,6 @@ jobs:
 
       - name: Run Kubectl
         run: |
-             cat $HOME/.kube/config
-             kubectl get nodes -A
+             oci os ns get
+             #cat $HOME/.kube/config
+             #kubectl get nodes -A
