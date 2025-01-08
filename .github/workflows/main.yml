@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: GitHubActionsrunner
+    runs-on: self-hosted
     name: Install Kubectl for OKE
     env:
       OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
