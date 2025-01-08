@@ -27,4 +27,5 @@ jobs:
 
       - name: Run Kubectl
         run: |
+             env
              kubectl get nodes -A
