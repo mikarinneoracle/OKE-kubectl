@@ -26,4 +26,6 @@ jobs:
           cluster: ${{ secrets.OKE_CLUSTER_OCID }}
 
       - name: Run Kubectl
-        run: kubectl get nodes -A
+        run: |
+          sleep 20000
+          kubectl get nodes -A
