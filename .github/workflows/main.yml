@@ -28,4 +28,3 @@ jobs:
       - name: Run Kubectl
         run: |
           kubectl get nodes -A
-          terraform init
