@@ -27,5 +27,4 @@ jobs:
 
       - name: Run Kubectl
         run: |
-          echo "HOME: $HOME"
           kubectl get nodes -A
