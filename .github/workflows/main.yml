@@ -1,15 +1,6 @@
-name: OKE kubect testing
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
 jobs:
-  build:
-
-    runs-on: self-hosted
+  install-kubectl:
+    runs-on: ubuntu-latest
     name: Install Kubectl for OKE
     env:
       OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
@@ -26,5 +17,4 @@ jobs:
           cluster: ${{ secrets.OKE_CLUSTER_OCID }}
 
       - name: Run Kubectl
-        run: |
-             kubectl get nodes -A
+        run: kubectl get nodes -A
