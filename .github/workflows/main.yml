@@ -1,5 +1,14 @@
+name: OKE kubectl testing
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 jobs:
-  install-kubectl:
+  build:
+
     runs-on: ubuntu-latest
     name: Install Kubectl for OKE
     env:
