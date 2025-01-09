@@ -27,5 +27,5 @@ jobs:
 
       - name: Run Kubectl
         run: |
-          whoami
+          echo "HOME: $HOME"
           kubectl get nodes -A
